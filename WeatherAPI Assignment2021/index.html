@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Front Page</title>
+    <link rel=stylesheet type="text/css" href="index.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <script src="http://cdn.date-fns.org/v1.9.0/date_fns.min.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+
+</head>
+
+<body>
+    <div class="navigator">
+        <div class="link">
+            <button id="btn1" class="btn btn-1">View 1</button>
+        </div>
+
+        <div class="link">
+            <button id="btn2" class="btn btn-2"> View 2</button>
+            <div id="dropdown2" class="dropdown dropdown-2 hidden">
+                <div data-type="temperature" data-value="0" class="dropdownItem ">Now</div>
+                <div data-type="temperature" data-value="24" class="dropdownItem">24 hours</div>
+                <div data-type="temperature" data-value="48" class="dropdownItem">48 hours</div>
+                <div data-type="temperature" data-value="72" class="dropdownItem">72 hours</div>
+                <div data-type="temperature" data-value="168" class="dropdownItem">1 week</div>
+                <div data-type="temperature" data-value="672" class="dropdownItem">1 month</div>
+            </div>
+        </div>
+
+        <div class="link">
+            <button id="btn3" class="btn btn-3"> View 3</button>
+            <div id="dropdown3" class="dropdown dropdown-3 hidden">
+                <div data-type="light" data-value="0" class="dropdownItem">Now</div>
+                <div data-type="light" data-value="24" class="dropdownItem">24 hours</div>
+                <div data-type="light" data-value="48" class="dropdownItem">48 hours</div>
+                <div data-type="light" data-value="72" class="dropdownItem">72 hours</div>
+                <div data-type="light" data-value="168" class="dropdownItem">1 week</div>
+                <div data-type="light" data-value="672" class="dropdownItem">1 month</div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="root">
+        <div id="view"></div>
+        <div id="canvasContainer">
+            <canvas id="canvas"></canvas>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
