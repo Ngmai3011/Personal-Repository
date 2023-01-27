@@ -1,0 +1,26 @@
+.Card {
+  display: flex;
+  width: 300px;
+  padding: 28px 24px 28px 36px;
+  border-bottom: 1px rgba(60, 92, 128, 0.6);
+  border-radius: 30px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%);
+  align-items: center;
+}
+
+.Card + .Card {
+  margin-left: 24px;
+}
+
+.CardText {
+  font-size: 24px;
+  font-weight: 600;
+  margin-left: 24px;
+  text-align: left;
+}
+
+.CardIcon svg {
+  height: 30px;
+  width: 30px;
+}
