@@ -1,1 +1,1 @@
-Some codes just for practice.
+Code just for practice.
