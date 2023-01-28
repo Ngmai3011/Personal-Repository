@@ -1,0 +1,4 @@
+﻿  main.cpp
+D:\TAMK\Programming Language\Programming Language 2\Project Work - Mai Hoang\Project Work - Mai Hoang\main.cpp(162,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+D:\TAMK\Programming Language\Programming Language 2\Project Work - Mai Hoang\Project Work - Mai Hoang\main.cpp(157): warning C4715: 'gameplay': not all control paths return a value
+  Project Work - Mai Hoang.vcxproj -> D:\TAMK\Programming Language\Programming Language 2\Project Work - Mai Hoang\Debug\Project Work - Mai Hoang.exe
