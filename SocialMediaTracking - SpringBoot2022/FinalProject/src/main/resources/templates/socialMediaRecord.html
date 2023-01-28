@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+    <title>Social Media Tracking</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" />
+	</head>
+	
+	<body style="background-color:lightgrey">
+	<div class="container" >
+		<h1 style="padding:20px 0 0">Social Media Tracking</h1>
+		<h3 th:inline="text">Welcome [[${#httpServletRequest.remoteUser}]]</h3> 
+	<div class="col-md-4" style="padding:20px 0">
+		<div style="display: inline-block"> <form th:action="@{/logout}" method="post">
+			<input type="submit" value="Log Out" class="btn btn-sm btn-danger"/>
+		</form> </div>
+		<div style="display: inline-block">
+		<form th:action="@{/signup}" method="post">
+			<input type="submit" value="Create a new account" class="btn btn-sm btn-success"/>
+		</form> </div>
+	</div> 
+	
+    <table class="table table-striped" style="text-align:center">
+		<tr>
+		    <th>Name</th>
+		    <th>Age</th>
+		    <th>Most used platforms</th>
+		    <th>Frequency</th>
+		    <th>Purpose</th>
+		    <th> </th>
+		</tr>  
+    	<tr th:each = "socialmedia : ${socialmedias}">
+    		<td th:text="${socialmedia.name}"></td>
+    		<td th:text="${socialmedia.age}"></td>
+    		<td th:text="${socialmedia.platform}"></td>
+    		<td th:text="${socialmedia.frequency.name}"></td>
+    		<td th:text="${socialmedia.purpose}"></td> 	
+    			
+ 			<td><a class="btn btn-xs btn-danger" th:href="@{/edit/{id}(id=${socialmedia.id})}">Edit</a> 
+ 			<a class="btn btn-xs btn-danger" th:href="@{/delete/{id}(id=${socialmedia.id})}" >Delete</a></td>    		  
+    	</tr>
+     </table>
+	 			<a class="btn btn-xs btn-primary" href="/add">Add new record</a> 
+	 			<a sec:authorize="hasAuthority('ADMIN')" class="btn btn-xs btn-secondary" href="/chart">View chart</a> 
+	 			<hr class="solid">
+	 			<h5 th:inline="text">Total recorded: [[${count}]]</h5> 
+</div> 	 			  	
+	</body>
+</html>
