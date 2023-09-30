@@ -1,1 +1,1 @@
-Some pieces of code for practice 
+Some pieces of code
